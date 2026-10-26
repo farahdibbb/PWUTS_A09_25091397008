@@ -1,0 +1,17 @@
+<h1>Cek status cucian</h1>
+<p class="lead">Ketik 4 digit terakhir nomor resi di struk nota kamu.</p>
+<form id="trackForm" class="tiket" novalidate>
+  <label for="resi">4 digit terakhir resi</label>
+  <div class="resi-box">
+    <input id="resi" name="resi" inputmode="numeric" maxlength="4" autocomplete="off" placeholder="0000" aria-describedby="resiErr">
+    <button class="btn" type="submit">Cek status</button>
+  </div>
+  <p class="err-msg" id="resiErr"></p>
+  <p class="hint">Coba resi contoh:
+    <button type="button" class="chip" data-r="1234">1234</button>
+    <button type="button" class="chip" data-r="5678">5678</button>
+    <button type="button" class="chip" data-r="9012">9012</button>
+    <button type="button" class="chip" data-r="3456">3456</button>
+  </p>
+</form>
+<div id="trackResult"></div>
