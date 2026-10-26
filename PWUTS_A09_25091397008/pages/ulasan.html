@@ -1,0 +1,46 @@
+<h1>Beri ulasan</h1>
+<p class="lead">Ceritakan pengalamanmu agar layanan HOLA makin baik. Ulasan bisa diisi setelah status cucian <strong>Selesai</strong> (resi contoh: 3456 atau 7788).</p>
+<form id="ulasanForm" class="tiket" novalidate>
+  <label for="nama">Nama</label>
+  <input id="nama" name="nama" autocomplete="name" placeholder="Contoh: Rina K.">
+  <p class="err-msg"></p>
+
+  <label for="resi">4 digit terakhir resi</label>
+  <input id="resi" name="resi" inputmode="numeric" maxlength="4" autocomplete="off" placeholder="0000">
+  <p class="err-msg"></p>
+
+  <fieldset style="border:0;padding:0;margin:14px 0 0">
+    <legend style="font-weight:600;padding:0">Penilaian</legend>
+    <div class="stars">
+      <input type="radio" name="rating" id="r5" value="5"><label for="r5" title="5 – Sangat puas">★</label>
+      <input type="radio" name="rating" id="r4" value="4"><label for="r4" title="4 – Puas">★</label>
+      <input type="radio" name="rating" id="r3" value="3"><label for="r3" title="3 – Cukup">★</label>
+      <input type="radio" name="rating" id="r2" value="2"><label for="r2" title="2 – Kurang">★</label>
+      <input type="radio" name="rating" id="r1" value="1"><label for="r1" title="1 – Buruk">★</label>
+    </div>
+    <p class="err-msg" id="ratingErr"></p>
+  </fieldset>
+
+  <label for="kategori">Hal yang dinilai</label>
+  <select id="kategori" name="kategori">
+    <option value="">– Pilih –</option>
+    <option>Kebersihan cucian</option><option>Kecepatan</option><option>Keramahan kasir</option><option>Harga</option>
+  </select>
+  <p class="err-msg"></p>
+
+  <label for="komentar">Komentar</label>
+  <textarea id="komentar" name="komentar" rows="4" maxlength="300" placeholder="Minimal 10 karakter"></textarea>
+  <p class="hint"><span id="cnt">0</span>/300 karakter</p>
+  <p class="err-msg"></p>
+
+  <label style="display:flex;gap:8px;align-items:center;font-weight:400">
+    <input type="checkbox" name="setuju" style="width:auto"> Ulasan boleh ditampilkan di halaman ini
+  </label>
+  <p class="err-msg"></p>
+
+  <div id="ulasanMsg"></div>
+  <button class="btn" type="submit">Kirim ulasan</button>
+</form>
+
+<h2>Ulasan pelanggan <span class="hint" id="rataRata"></span></h2>
+<div id="daftarUlasan"></div>
